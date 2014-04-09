@@ -1,0 +1,10 @@
+#Ovaj program 3 puta ispisuje "Hello world!"
+
+			load r0, @broj1		; ucitaj 3 u registar r0
+			echo r0				; ispisi na konzolu poruku
+	 		halt				; zaustavi procesor
+
+#podaci koje koristimo u programu
+
+@broj1:		DEFINT 3			; broj 3 na drugoj mem. lokaciji
+@broj2:		DEFINT 0			; broj 0 na trecoj mem. lokaciji
