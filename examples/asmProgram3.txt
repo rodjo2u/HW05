@@ -7,4 +7,4 @@
 #podaci koje koristimo u programu
 
 @broj1:		DEFINT 3			; broj 3 na drugoj mem. lokaciji
-@broj2:		DEFINT 0			; broj 0 na trecoj mem. lokaciji
+@broj2:		DEFINT 5			; broj 0 na trecoj mem. lokaciji

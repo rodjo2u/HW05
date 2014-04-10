@@ -26,7 +26,7 @@ public class InstrEcho implements Instruction {
 		if (arguments.get(0).isRegister()) {
 			parameter = arguments.get(0).getValue();
 		} else {
-			parameter = arguments.get(0);
+			parameter = arguments.get(0).getValue();
 		}
 	}
 

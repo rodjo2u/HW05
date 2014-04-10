@@ -3,7 +3,7 @@
 	<classpathentry kind="src" output="build/classes" path="src/main/java"/>
 	<classpathentry kind="src" output="build/test" path="src/test/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="D:/ZEclipseProjects/HW05-0036441995/lib/parser.jar" sourcepath="D:/ZEclipseProjects/HW05-0036441995/lib/parser.jar"/>
-	<classpathentry kind="lib" path="D:/ZEclipseProjects/HW05-0036441995/lib/models.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/workspace/HW05/lib/parser.jar" sourcepath="D:/ZEclipseProjects/HW05-0036441995/lib/parser.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Desktop/workspace/HW05/lib/models.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

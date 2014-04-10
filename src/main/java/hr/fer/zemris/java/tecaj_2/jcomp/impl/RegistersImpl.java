@@ -38,7 +38,7 @@ public class RegistersImpl implements Registers {
 	@Override
 	public void setProgramCounter(int value) {
 		if (value < 0) {
-			throw new IllegalArgumentException("Program counter must be > 0.");
+			throw new IllegalArgumentException("Program counter must be >= 0.");
 		}
 		programCounter = value;
 	}

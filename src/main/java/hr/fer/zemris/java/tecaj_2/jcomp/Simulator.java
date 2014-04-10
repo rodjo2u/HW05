@@ -1,6 +1,7 @@
 package hr.fer.zemris.java.tecaj_2.jcomp;
 
 import hr.fer.zemris.java.tecaj_2.jcomp.impl.ComputerImpl;
+import hr.fer.zemris.java.tecaj_2.jcomp.impl.ExecutionUnitImpl;
 import hr.fer.zemris.java.tecaj_2.jcomp.parser.InstructionCreatorImpl;
 import hr.fer.zemris.java.tecaj_2.jcomp.parser.ProgramParser;
 
@@ -20,9 +21,9 @@ public class Simulator {
 			e.printStackTrace();
 		}
 		
-		//ExecutionUnit exec = new ExecutionUnitImpl();
+		ExecutionUnit exec = new ExecutionUnitImpl();
 		
-		//exec.go(comp);
+		exec.go(comp);
 		
 	}
 
