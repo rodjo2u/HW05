@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="WINDOWS-1250" standalone="no"?>
+<pmd-cpd>
+<duplication lines="19" tokens="127">
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[	public InstrMove(List<InstructionArgument> arguments) {
+		if (arguments.size() != 2) {
+			throw new IllegalArgumentException("Expected 2 arguments!");
+		}
+		if (!arguments.get(0).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 0!");
+		}
+		if (!arguments.get(1).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 1!");
+		}
+
+		this.registerIndex1 = ((Integer) arguments.get(0).getValue())
+				.intValue();
+		this.registerIndex2 = ((Integer) arguments.get(1).getValue())
+				.intValue();
+	}
+
+	@Override
+	public boolean execute(Computer computer) {]]></codefragment>
+</duplication>
+<duplication lines="18" tokens="105">
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<codefragment><![CDATA[	public InstrDecrement(List<InstructionArgument> arguments) {
+		if (arguments.size() != 1) {
+			throw new IllegalArgumentException("Expected 1 argument!");
+		}
+		if (!arguments.get(0).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 0!");
+		}
+		
+		this.registerIndex = ((Integer) arguments.get(0).getValue())
+				.intValue();
+	}
+
+	@Override
+	public boolean execute(Computer computer) {
+		computer.getRegisters().setRegisterValue(
+				registerIndex,
+				(Integer) computer.getRegisters().getRegisterValue(
+						registerIndex) - 1);]]></codefragment>
+</duplication>
+<duplication lines="15" tokens="94">
+<file line="15" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<codefragment><![CDATA[	public InstrAdd(List<InstructionArgument> arguments) {
+		if (arguments.size() != 3) {
+			throw new IllegalArgumentException("Expected 3 arguments!");
+		}
+		if (!arguments.get(0).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 0!");
+		}
+		if (!arguments.get(1).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 1!");
+		}
+		if (!arguments.get(2).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 2!");
+		}
+		
+		this.registerIndex1 = ((Integer) arguments.get(0).getValue())]]></codefragment>
+</duplication>
+<duplication lines="12" tokens="74">
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<codefragment><![CDATA[	public InstrJump(List<InstructionArgument> arguments) {
+		if (arguments.size() != 1) {
+			throw new IllegalArgumentException("Expected 1 argument!");
+		}
+		if (!arguments.get(0).isNumber()) {
+			throw new IllegalArgumentException("Type mismatch for argument 0!");
+		}
+		newProgramCounterValue = (Integer)arguments.get(0).getValue();
+	}
+
+	@Override
+	public boolean execute(Computer computer) {]]></codefragment>
+</duplication>
+<duplication lines="9" tokens="50">
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[	public InstrLoad(List<InstructionArgument> arguments) {
+		// check arguments
+		if (arguments.size() != 2) {
+			throw new IllegalArgumentException("Expected 2 arguments!");
+		}
+		if (!arguments.get(0).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 0!");
+		}
+		if (arguments.get(1).isRegister() || arguments.get(1).isString()) {]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="48">
+<file line="26" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[			throw new IllegalArgumentException("Type mismatch for argument 2!");
+		}
+		
+		this.registerIndex1 = ((Integer) arguments.get(0).getValue())
+				.intValue();
+		this.registerIndex2 = ((Integer) arguments.get(1).getValue())
+				.intValue();]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="48">
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<codefragment><![CDATA[	public InstrIinput(List<InstructionArgument> arguments) {
+		if (arguments.size() != 1) {
+			throw new IllegalArgumentException("Expected 1 argument!");
+		}
+		if (!arguments.get(0).isNumber()) {
+			throw new IllegalArgumentException("Type mismatch for argument 0!");
+		}]]></codefragment>
+</duplication>
+<duplication lines="8" tokens="46">
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[			throw new IllegalArgumentException("Expected 3 arguments!");
+		}
+		if (!arguments.get(0).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 0!");
+		}
+		if (!arguments.get(1).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 1!");
+		}]]></codefragment>
+</duplication>
+<duplication lines="10" tokens="43">
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<codefragment><![CDATA[	public NameComparator(boolean reverseOrder) {
+		if (reverseOrder) {
+			flag = -1;
+		} else {
+			flag = 1;
+		}
+	}
+	@Override
+	public int compare(File o1, File o2) {
+		if (o1.getName().compareTo(o2.getName()) > 0) {]]></codefragment>
+</duplication>
+<duplication lines="10" tokens="39">
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\LastModifiedComparator.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\TypeComparator.java"/>
+<codefragment><![CDATA[	public LastModifiedComparator(boolean reverseOrder) {
+		if (reverseOrder) {
+			flag = -1;
+		} else {
+			flag = 1;
+		}
+	}
+	@Override
+	public int compare(File o1, File o2) {
+		if (o1.lastModified() < o2.lastModified()) {]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="36">
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<codefragment><![CDATA[	public InstrDecrement(List<InstructionArgument> arguments) {
+		if (arguments.size() != 1) {
+			throw new IllegalArgumentException("Expected 1 argument!");
+		}
+		if (!arguments.get(0).isRegister()) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="32">
+<file line="40" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<file line="107" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[		for (int i=0; i < printSpecifiers.size(); i++) {
+			switch (printSpecifiers.get(i)) {
+				case ("n") :]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="31">
+<file line="10" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\NameLengthFilenameFilter.java"/>
+<file line="10" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ReverseNameLengthFilenameFilter.java"/>
+<codefragment><![CDATA[	public NameLengthFilenameFilter(int size) {
+		this.size = size;
+	}
+
+	@Override
+	public boolean accept(File dir, String name) {
+		if (name.length() > size) {]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="31">
+<file line="10" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ReverseSizeFilenameFilter.java"/>
+<file line="10" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\SizeFilenameFilter.java"/>
+<codefragment><![CDATA[	public ReverseSizeFilenameFilter(int size) {
+		this.size = size;
+	}
+
+	@Override
+	public boolean accept(File dir, String name) {
+		if (dir.length() > size) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="30">
+<file line="127" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[	private static void printResults(List<List<File>> results) {
+		for (List<File> list : results) {
+			for (File file :list) {]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="29">
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<codefragment><![CDATA[		this.registerIndex = ((Integer) arguments.get(0).getValue())
+				.intValue();
+	}
+
+	@Override
+	public boolean execute(Computer computer) {
+		computer.getRegisters().setRegisterValue(]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="26">
+<file line="10" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\NameLengthFilenameFilter.java"/>
+<file line="10" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ReverseNameLengthFilenameFilter.java"/>
+<file line="10" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ReverseSizeFilenameFilter.java"/>
+<file line="10" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\SizeFilenameFilter.java"/>
+<codefragment><![CDATA[	public NameLengthFilenameFilter(int size) {
+		this.size = size;
+	}
+
+	@Override
+	public boolean accept(File dir, String name) {
+		if (name.length() > size) {]]></codefragment>
+</duplication>
+<duplication lines="6" tokens="26">
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<codefragment><![CDATA[			throw new IllegalArgumentException("Expected 3 arguments!");
+		}
+		if (!arguments.get(0).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 0!");
+		}
+		if (!arguments.get(1).isRegister()) {]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="25">
+<file line="24" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<codefragment><![CDATA[		memoryLocation = (Integer)arguments.get(0).getValue();
+	}
+
+	@Override
+	public boolean execute(Computer computer) {]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="24">
+<file line="19" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\MemoryImpl.java"/>
+<file line="32" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\MemoryImpl.java"/>
+<codefragment><![CDATA[	public void setLocation(int location, Object value) {
+		if (location < 0 || location > memory.length-1) {
+			throw new IndexOutOfBoundsException(
+					"You have tryed to access memory locatio outside of memory range!");
+		}]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="24">
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="15" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="15" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[			throw new IllegalArgumentException("Expected 3 arguments!");
+		}
+		if (!arguments.get(0).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 0!");
+		}]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="23">
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrEcho.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<codefragment><![CDATA[	public InstrDecrement(List<InstructionArgument> arguments) {
+		if (arguments.size() != 1) {
+			throw new IllegalArgumentException("Expected 1 argument!");]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="22">
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ExtensionFilenameFilter.java"/>
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\FilesFilenameFilter.java"/>
+<codefragment><![CDATA[	public ExtensionFilenameFilter() {
+		super();
+	}
+
+	@Override
+	public boolean accept(File dir, String name) {
+		if (name.lastIndexOf(".")>0 && name.length()>name.lastIndexOf(".")) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="22">
+<file line="84" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<file line="90" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[	private String leftPadding(String str, String padding, int length) {
+		padding = generatePadding(str, padding, length);
+		return padding + str;]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="22">
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		this.registerIndex1 = ((Integer) arguments.get(0).getValue())
+				.intValue();
+		this.registerIndex2 = ((Integer) arguments.get(1).getValue())]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="22">
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<codefragment><![CDATA[		this.registerIndex2 = ((Integer) arguments.get(1).getValue())
+				.intValue();
+		this.registerIndex3 = ((Integer) arguments.get(2).getValue())]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="22">
+<file line="33" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		this.registerIndex3 = ((Integer) arguments.get(2).getValue())
+				.intValue();
+	}
+
+	@Override
+	public boolean execute(Computer computer) {
+		Object value1 = computer.getRegisters()]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="21">
+<file line="33" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<codefragment><![CDATA[		this.registerIndex3 = ((Integer) arguments.get(2).getValue())
+				.intValue();
+	}]]></codefragment>
+</duplication>
+<duplication lines="6" tokens="21">
+<file line="33" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		this.registerIndex3 = ((Integer) arguments.get(2).getValue())
+				.intValue();
+	}
+
+	@Override
+	public boolean execute(Computer computer) {]]></codefragment>
+</duplication>
+<duplication lines="6" tokens="21">
+<file line="23" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="41" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<codefragment><![CDATA[	}
+
+	@Override
+	public boolean execute(Computer computer) {
+		computer.getRegisters().setRegisterValue(
+				registerIndex,]]></codefragment>
+</duplication>
+<duplication lines="4" tokens="20">
+<file line="30" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\ResultsFilter.java"/>
+<file line="41" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\ResultsFilter.java"/>
+<codefragment><![CDATA[				filenameFilter = new SizeFilenameFilter(Integer.parseInt(filter
+						.substring(1)));
+			}
+			if (filter.startsWith("-s")) {]]></codefragment>
+</duplication>
+<duplication lines="4" tokens="20">
+<file line="34" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\ResultsFilter.java"/>
+<file line="45" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\ResultsFilter.java"/>
+<codefragment><![CDATA[				filenameFilter = new ReverseSizeFilenameFilter(
+						Integer.parseInt(filter.substring(2)));
+			}
+			if (filter.matches("f")) {]]></codefragment>
+</duplication>
+<duplication lines="6" tokens="20">
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\ExecutableComparator.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\LastModifiedComparator.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\TypeComparator.java"/>
+<codefragment><![CDATA[			flag = -1;
+		}
+	}
+	@Override
+	public int compare(File o1, File o2) {
+		if (o1.canExecute() && !o2.canExecute()) {]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="20">
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		this.registerIndex1 = ((Integer) arguments.get(0).getValue())
+				.intValue();]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="20">
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		this.registerIndex2 = ((Integer) arguments.get(1).getValue())
+				.intValue();]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="19">
+<file line="128" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="23" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<file line="32" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[		for (List<File> list : results) {
+			for (File file :list) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="19">
+<file line="38" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="35" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<codefragment><![CDATA[	public boolean execute(Computer computer) {
+		Object value1 = computer.getRegisters()
+				.getRegisterValue(registerIndex2);]]></codefragment>
+</duplication>
+<duplication lines="6" tokens="19">
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="28" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<codefragment><![CDATA[				.intValue();
+	}
+
+	@Override
+	public boolean execute(Computer computer) {
+		computer.getRegisters().setRegisterValue(]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="19">
+<file line="41" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<codefragment><![CDATA[	}
+
+	@Override
+	public boolean execute(Computer computer) {
+		computer.getRegisters().setRegisterValue(registerIndex, computer.getMemory().getLocation(memoryAddress));]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="18">
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ExtensionFilenameFilter.java"/>
+<file line="12" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\NameLengthFilenameFilter.java"/>
+<file line="12" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ReverseNameLengthFilenameFilter.java"/>
+<codefragment><![CDATA[	}
+
+	@Override
+	public boolean accept(File dir, String name) {
+		if (name.lastIndexOf(".")>0 && name.length()>name.lastIndexOf(".")) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="17">
+<file line="94" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="103" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="112" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<codefragment><![CDATA[						filtersList.add(specificator[1]);
+					} else {
+						System.out.println("There is no filter specificator: "]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="17">
+<file line="97" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="106" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<codefragment><![CDATA[								+ specificator[1]);
+						System.exit(-1);
+					}
+					break;
+				case ("-s") :]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="17">
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="41" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<codefragment><![CDATA[	}
+
+	@Override
+	public boolean execute(Computer computer) {
+		computer.getRegisters().setProgramCounter(newProgramCounterValue);]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="16">
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ExtensionFilenameFilter.java"/>
+<file line="12" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ReverseSizeFilenameFilter.java"/>
+<file line="12" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\SizeFilenameFilter.java"/>
+<codefragment><![CDATA[	}
+
+	@Override
+	public boolean accept(File dir, String name) {
+		if (name.lastIndexOf(".")>0 && name.length()>name.lastIndexOf(".")) {]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="16">
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\FilesFilenameFilter.java"/>
+<file line="12" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\NameLengthFilenameFilter.java"/>
+<file line="12" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ReverseNameLengthFilenameFilter.java"/>
+<codefragment><![CDATA[	}
+
+	@Override
+	public boolean accept(File dir, String name) {
+		if (!dir.isFile()) {]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="16">
+<file line="62" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<file line="68" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[		if (file.getName().length() > printSpecifiersLengths[index]) {
+			printSpecifiersLengths[index] = file.getName().length();]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="16">
+<file line="26" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java"/>
+<file line="28" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java"/>
+<codefragment><![CDATA[		if (o1.getName().compareTo(o2.getName()) > 0) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="16">
+<file line="26" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<codefragment><![CDATA[		if (o1.getName().compareTo(o2.getName()) > 0) {
+			return 1*flag;
+		} else if (o1.getName().compareTo(o2.getName()) < 0) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="16">
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java"/>
+<codefragment><![CDATA[		if (o1.getName().length() > o2.getName().length()) {
+			return 1 * flag;
+		} else if (o1.getName().length() < o2.getName().length()) {]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="16">
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java"/>
+<codefragment><![CDATA[		} else if (o1.getName().length() < o2.getName().length()) {
+			return -1 * flag;
+		}
+		return 0;
+	}
+
+}]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="16">
+<file line="15" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrEcho.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[	public InstrAdd(List<InstructionArgument> arguments) {
+		if (arguments.size() != 3) {]]></codefragment>
+</duplication>
+<duplication lines="4" tokens="16">
+<file line="46" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="43" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<codefragment><![CDATA[						+ ((Integer) value2).intValue()));
+		return false;
+	}
+}]]></codefragment>
+</duplication>
+<duplication lines="4" tokens="15">
+<file line="97" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="106" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="115" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<codefragment><![CDATA[								+ specificator[1]);
+						System.exit(-1);
+					}
+					break;]]></codefragment>
+</duplication>
+<duplication lines="9" tokens="15">
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\NameLengthFilenameFilter.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ReverseSizeFilenameFilter.java"/>
+<codefragment><![CDATA[		if (name.length() > size) {
+			return false;
+		}
+		return true;
+		
+	}
+	
+	
+}]]></codefragment>
+</duplication>
+<duplication lines="9" tokens="15">
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ReverseNameLengthFilenameFilter.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\SizeFilenameFilter.java"/>
+<codefragment><![CDATA[		if (name.length() <= size) {
+			return false;
+		}
+		return true;
+		
+	}
+	
+	
+}]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="15">
+<file line="44" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="41" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<codefragment><![CDATA[				registerIndex1,
+				Integer.valueOf(((Integer) value1).intValue()]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="14">
+<file line="111" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<file line="121" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[					result += rightPadding(file.getName(), " ", printSpecifiersLengths[i]) + " |";
+					break;
+				case ("t") :]]></codefragment>
+</duplication>
+<duplication lines="4" tokens="14">
+<file line="114" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<file line="129" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[					if (file.isDirectory()) {
+						result += " d" + " |";
+					} else {
+						result += " f" + " |";]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="14">
+<file line="99" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<file line="104" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<codefragment><![CDATA[				if (sortedResultsList.size() == 0) {
+					sortedResultsList.add(file);
+				} else {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="14">
+<file line="26" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\LastModifiedComparator.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java"/>
+<codefragment><![CDATA[		if (o1.lastModified() < o2.lastModified()) {
+			return 1*flag;
+		} else if (o1.lastModified() > o2.lastModified()) {]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="14">
+<file line="28" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\LastModifiedComparator.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java"/>
+<codefragment><![CDATA[		} else if (o1.lastModified() > o2.lastModified()) {
+			return -1*flag;
+		}
+		return 0;
+	}
+
+}]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="14">
+<file line="24" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<file line="35" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<codefragment><![CDATA[		memoryLocation = (Integer)arguments.get(0).getValue();]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="13">
+<file line="35" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="36" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<codefragment><![CDATA[	private static List<String> filtersList = new LinkedList<>();
+	private static List<String> sortersList = new LinkedList<>();]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="13">
+<file line="127" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="19" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[	private static void printResults(List<List<File>> results) {]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="13">
+<file line="28" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\ExecutableComparator.java"/>
+<file line="30" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\TypeComparator.java"/>
+<codefragment><![CDATA[		} else if (!o1.canExecute() && o2.canExecute()) {
+			return 1*flag;
+		}
+		return 0;
+	}
+
+}]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="13">
+<file line="19" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\Simulator.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\ExecutionUnitImpl.java"/>
+<codefragment><![CDATA[		} catch(Exception e) {
+			System.out.println("Could not parse assembly code.");]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="13">
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\ExecutionUnitImpl.java"/>
+<file line="24" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<codefragment><![CDATA[	public boolean go(Computer computer) {
+		computer.getRegisters().setProgramCounter(0);]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="13">
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="24" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<file line="35" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		this.registerIndex1 = ((Integer) arguments.get(0).getValue())]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="13">
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="36" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		this.registerIndex2 = ((Integer) arguments.get(1).getValue())]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="13">
+<file line="34" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="12" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrHalt.java"/>
+<file line="24" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<file line="28" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="28" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[				.intValue();
+	}
+
+	@Override
+	public boolean execute(Computer computer) {]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="13">
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrEcho.java"/>
+<file line="30" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrEcho.java"/>
+<codefragment><![CDATA[		if (arguments.get(0).isRegister()) {
+			parameter = arguments.get(0).getValue();]]></codefragment>
+</duplication>
+<duplication lines="6" tokens="13">
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrEcho.java"/>
+<file line="39" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<codefragment><![CDATA[			parameter = arguments.get(0).getValue();
+		}
+	}
+
+	@Override
+	public boolean execute(Computer computer) {]]></codefragment>
+</duplication>
+<duplication lines="5" tokens="13">
+<file line="33" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrEcho.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<codefragment><![CDATA[	}
+
+	@Override
+	public boolean execute(Computer computer) {
+		if(isRegister) {]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="12">
+<file line="64" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\ResultsFilter.java"/>
+<file line="97" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<codefragment><![CDATA[		List<File> results = new LinkedList<>();
+		for (File file : files) {]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="12">
+<file line="61" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<file line="67" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[	private void checkNameLength(File file, int index) {
+		if (file.getName().length() > printSpecifiersLengths[index]) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="12">
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\ExecutableComparator.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\LastModifiedComparator.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\TypeComparator.java"/>
+<codefragment><![CDATA[	public ExecutableComparator(boolean reverseOrder) {
+		if (reverseOrder) {
+			flag = 1;]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="12">
+<file line="26" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\LastModifiedComparator.java"/>
+<file line="26" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java"/>
+<codefragment><![CDATA[		if (o1.lastModified() < o2.lastModified()) {
+			return 1*flag;
+		} else if (o1.lastModified() > o2.lastModified()) {]]></codefragment>
+</duplication>
+<duplication lines="7" tokens="12">
+<file line="28" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\LastModifiedComparator.java"/>
+<file line="28" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java"/>
+<codefragment><![CDATA[		} else if (o1.lastModified() > o2.lastModified()) {
+			return -1*flag;
+		}
+		return 0;
+	}
+
+}]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="12">
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<codefragment><![CDATA[		if (o1.getName().length() > o2.getName().length()) {
+			return 1 * flag;]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="12">
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="19" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="15" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="15" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[			throw new IllegalArgumentException("Expected 3 arguments!");
+		}
+		if (!arguments.get(0).isRegister()) {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="12">
+<file line="19" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrEcho.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="18" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="18" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="18" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		if (!arguments.get(0).isRegister()) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="12">
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		this.registerIndex1 = ((Integer) arguments.get(0).getValue())
+				.intValue();
+		this.registerIndex2 = ((Integer) arguments.get(1).getValue())]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="12">
+<file line="40" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="37" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<codefragment><![CDATA[				.getRegisterValue(registerIndex2);
+		Object value2 = computer.getRegisters()
+				.getRegisterValue(registerIndex3);]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="12">
+<file line="37" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="40" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<codefragment><![CDATA[			System.out.println("");
+			computer.getRegisters().setFlag(false);
+		} catch (IOException e) {]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="12">
+<file line="24" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<codefragment><![CDATA[	public boolean execute(Computer computer) {
+		computer.getRegisters().setProgramCounter(newProgramCounterValue);]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="11">
+<file line="39" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="10" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\Simulator.java"/>
+<codefragment><![CDATA[	public static void main(String[] args) {]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="11">
+<file line="92" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="101" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="110" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<codefragment><![CDATA[				case ("-f") :
+					if (specificator[1].matches(ResultsFilter.filterRegex)) {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="11">
+<file line="127" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\Dir.java"/>
+<file line="91" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<codefragment><![CDATA[	private static void printResults(List<List<File>> results) {]]></codefragment>
+</duplication>
+<duplication lines="6" tokens="11">
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ExtensionFilenameFilter.java"/>
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\FilesFilenameFilter.java"/>
+<file line="9" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\ExecutionUnitImpl.java"/>
+<codefragment><![CDATA[	public ExtensionFilenameFilter() {
+		super();
+	}
+
+	@Override
+	public boolean accept(File dir, String name) {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="11">
+<file line="19" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[	public void printResults(List<List<File>> results) {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="11">
+<file line="84" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<file line="90" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<file line="95" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[	private String leftPadding(String str, String padding, int length) {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="11">
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<codefragment><![CDATA[		if (o1.getName().length() > o2.getName().length()) {]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="11">
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\ExecutionUnitImpl.java"/>
+<file line="26" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="44" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="32" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<codefragment><![CDATA[	public boolean go(Computer computer) {
+		computer.getRegisters().setProgramCounter(0);]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="11">
+<file line="19" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="18" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="18" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="24" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="18" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		if (!arguments.get(0).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 0!");]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="11">
+<file line="19" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="17" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="18" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="18" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="18" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		if (!arguments.get(0).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 0!");
+		}]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="11">
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="30" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		if (!arguments.get(1).isRegister()) {
+			throw new IllegalArgumentException("Type mismatch for argument 1!");
+		}]]></codefragment>
+</duplication>
+<duplication lines="4" tokens="11">
+<file line="35" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="23" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="33" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrEcho.java"/>
+<file line="13" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrHalt.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<file line="41" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[	}
+
+	@Override
+	public boolean execute(Computer computer) {]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="11">
+<file line="39" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="34" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		Object value1 = computer.getRegisters()
+				.getRegisterValue(registerIndex2);]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="11">
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		this.registerIndex = ((Integer) arguments.get(0).getValue())
+				.intValue();
+	}]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="11">
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrEcho.java"/>
+<file line="24" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<codefragment><![CDATA[			parameter = arguments.get(0).getValue();
+		}]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="11">
+<file line="35" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="40" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[			computer.getRegisters().setFlag(true);
+		} catch (NumberFormatException e){]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="11">
+<file line="37" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="40" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="34" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[			System.out.println("");
+			computer.getRegisters().setFlag(false);]]></codefragment>
+</duplication>
+<duplication lines="6" tokens="10">
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ExtensionFilenameFilter.java"/>
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\FilesFilenameFilter.java"/>
+<file line="9" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\ExecutionUnitImpl.java"/>
+<file line="11" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrHalt.java"/>
+<codefragment><![CDATA[	public ExtensionFilenameFilter() {
+		super();
+	}
+
+	@Override
+	public boolean accept(File dir, String name) {]]></codefragment>
+</duplication>
+<duplication lines="9" tokens="10">
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\NameLengthFilenameFilter.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ReverseNameLengthFilenameFilter.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\ReverseSizeFilenameFilter.java"/>
+<file line="16" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\filter\filters\SizeFilenameFilter.java"/>
+<codefragment><![CDATA[		if (name.length() > size) {
+			return false;
+		}
+		return true;
+		
+	}
+	
+	
+}]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="10">
+<file line="39" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<file line="97" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+<codefragment><![CDATA[	private void checkSpecifierList(File file) {
+		for (int i=0; i < printSpecifiers.size(); i++) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="10">
+<file line="38" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<file line="44" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<file line="50" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<file line="56" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<file line="62" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<file line="68" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<codefragment><![CDATA[				comparator = new SizeComparator(false);
+			}
+			if (sort.startsWith("-s")) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="10">
+<file line="41" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<file line="47" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<file line="53" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<file line="59" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<file line="65" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java"/>
+<codefragment><![CDATA[				comparator = new SizeComparator(true);
+			}
+			if (sort.startsWith("n")) {]]></codefragment>
+</duplication>
+<duplication lines="12" tokens="10">
+<file line="6" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\ExecutableComparator.java"/>
+<file line="6" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\LastModifiedComparator.java"/>
+<file line="6" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java"/>
+<file line="6" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="6" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java"/>
+<file line="6" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\TypeComparator.java"/>
+<codefragment><![CDATA[public class ExecutableComparator implements Comparator<File>{
+
+	private int flag;
+	
+	/**
+	 * Compares canExecute of files. Executable files are shown first.
+	 * 
+	 * @param reverseOrder
+	 *            If <code>reverseOrder</code> is <code>true</code> comparator will reverse the order of
+	 *            elements.
+	 */
+	public ExecutableComparator(boolean reverseOrder) {]]></codefragment>
+</duplication>
+<duplication lines="3" tokens="10">
+<file line="26" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\ExecutableComparator.java"/>
+<file line="28" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\LastModifiedComparator.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj\hw5\sorter\comparators\TypeComparator.java"/>
+<codefragment><![CDATA[		if (o1.canExecute() && !o2.canExecute()) {
+			return -1*flag;
+		} else if (!o1.canExecute() && o2.canExecute()) {]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="10">
+<file line="14" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\ExecutionUnitImpl.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<codefragment><![CDATA[	public boolean go(Computer computer) {
+		computer.getRegisters().setProgramCounter(0);]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="10">
+<file line="22" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="30" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		if (!arguments.get(1).isRegister()) {]]></codefragment>
+</duplication>
+<duplication lines="1" tokens="10">
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="28" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrEcho.java"/>
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrEcho.java"/>
+<file line="24" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJump.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrJumpIfTrue.java"/>
+<file line="35" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrLoad.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		this.registerIndex1 = ((Integer) arguments.get(0).getValue())]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="10">
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="33" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="21" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrDecrement.java"/>
+<file line="20" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIncrement.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="29" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="31" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMul.java"/>
+<file line="25" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<file line="27" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		this.registerIndex1 = ((Integer) arguments.get(0).getValue())
+				.intValue();]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="10">
+<file line="39" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="34" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="34" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[		Object value1 = computer.getRegisters()
+				.getRegisterValue(registerIndex2);]]></codefragment>
+</duplication>
+<duplication lines="2" tokens="10">
+<file line="43" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrAdd.java"/>
+<file line="33" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<codefragment><![CDATA[		computer.getRegisters().setRegisterValue(
+				registerIndex1,]]></codefragment>
+</duplication>
+<duplication lines="6" tokens="10">
+<file line="9" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrMove.java"/>
+<file line="9" path="D:\ZEclipseProjects\HW05-0036441995\src\main\java\hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrTestEquals.java"/>
+<codefragment><![CDATA[public class InstrMove implements Instruction {
+
+	private int registerIndex1;
+	private int registerIndex2;
+
+	public InstrMove(List<InstructionArgument> arguments) {]]></codefragment>
+</duplication>
+</pmd-cpd>

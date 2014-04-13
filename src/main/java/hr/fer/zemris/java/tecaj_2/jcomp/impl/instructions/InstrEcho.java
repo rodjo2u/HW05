@@ -9,6 +9,7 @@ import hr.fer.zemris.java.tecaj_2.jcomp.InstructionArgument;
 public class InstrEcho implements Instruction {
 
 	private Object parameter;
+	private boolean isRegister;
 
 	/**
 	 * Writes out the value of the first and only argument to standard output.
@@ -25,6 +26,7 @@ public class InstrEcho implements Instruction {
 
 		if (arguments.get(0).isRegister()) {
 			parameter = arguments.get(0).getValue();
+			isRegister = true;
 		} else {
 			parameter = arguments.get(0).getValue();
 		}
@@ -32,8 +34,11 @@ public class InstrEcho implements Instruction {
 
 	@Override
 	public boolean execute(Computer computer) {
-		System.out.println(parameter);
+		if(isRegister) {
+			System.out.print(computer.getRegisters().getRegisterValue((Integer)parameter));
+		} else {
+			System.out.print(parameter);
+		}
 		return false;
 	}
-
 }

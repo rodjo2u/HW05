@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.3" sequence="0" timestamp="1397411672343" analysisTimestamp="1397411672482" release="">
+  <Project projectName="HW05-0036441995">
+    <Jar>D:\ZEclipseProjects\HW05-0036441995\build\classes</Jar>
+    <SrcDir>D:\ZEclipseProjects\HW05-0036441995\src\main\java</SrcDir>
+  </Project>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE" instanceHash="5e67043b4935a0368bc5bc95363d850b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>hr.fer.zemris.java.tecaj.hw5.filter.ResultsFilter.filterRegex isn&apos;t final but should be</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj.hw5.filter.ResultsFilter" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.filter.ResultsFilter" start="18" end="70" sourcefile="ResultsFilter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/filter/ResultsFilter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\filter\ResultsFilter.java">
+        <Message>At ResultsFilter.java:[lines 18-70]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj.hw5.filter.ResultsFilter</Message>
+    </Class>
+    <Field classname="hr.fer.zemris.java.tecaj.hw5.filter.ResultsFilter" name="filterRegex" signature="Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.filter.ResultsFilter" sourcefile="ResultsFilter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/filter/ResultsFilter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\filter\ResultsFilter.java">
+        <Message>In ResultsFilter.java</Message>
+      </SourceLine>
+      <Message>Field hr.fer.zemris.java.tecaj.hw5.filter.ResultsFilter.filterRegex</Message>
+    </Field>
+    <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.filter.ResultsFilter" primary="true" start="18" end="18" startBytecode="2" endBytecode="2" sourcefile="ResultsFilter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/filter/ResultsFilter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\filter\ResultsFilter.java">
+      <Message>At ResultsFilter.java:[line 18]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE" instanceHash="f247e3e9a2d762462bdafad8fffc333e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter.printRegex isn&apos;t final but should be</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" start="10" end="138" sourcefile="ResultsPrinter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/printer/ResultsPrinter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java">
+        <Message>At ResultsPrinter.java:[lines 10-138]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter</Message>
+    </Class>
+    <Field classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" name="printRegex" signature="Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" sourcefile="ResultsPrinter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/printer/ResultsPrinter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java">
+        <Message>In ResultsPrinter.java</Message>
+      </SourceLine>
+      <Message>Field hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter.printRegex</Message>
+    </Field>
+    <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" primary="true" start="10" end="10" startBytecode="2" endBytecode="2" sourcefile="ResultsPrinter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/printer/ResultsPrinter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java">
+      <Message>At ResultsPrinter.java:[line 10]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE" instanceHash="d8cf2f76f645e8a34bf89a3619dd3346" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Method concatenates strings using + in a loop</ShortMessage>
+    <LongMessage>hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter.generatePadding(String, String, int) concatenates strings using + in a loop</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" start="10" end="138" sourcefile="ResultsPrinter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/printer/ResultsPrinter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java">
+        <Message>At ResultsPrinter.java:[lines 10-138]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter</Message>
+    </Class>
+    <Method classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" name="generatePadding" signature="(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" start="96" end="102" startBytecode="0" endBytecode="186" sourcefile="ResultsPrinter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/printer/ResultsPrinter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+      <Message>In method hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter.generatePadding(String, String, int)</Message>
+    </Method>
+    <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" primary="true" start="99" end="99" startBytecode="18" endBytecode="18" sourcefile="ResultsPrinter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/printer/ResultsPrinter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java">
+      <Message>At ResultsPrinter.java:[line 99]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SBSC_USE_STRINGBUFFER_CONCATENATION" priority="2" abbrev="SBSC" category="PERFORMANCE" instanceHash="ae810220b46a8e89484449422d808f64" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="18">
+    <ShortMessage>Method concatenates strings using + in a loop</ShortMessage>
+    <LongMessage>hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter.initializeFrameLine() concatenates strings using + in a loop</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" start="10" end="138" sourcefile="ResultsPrinter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/printer/ResultsPrinter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java">
+        <Message>At ResultsPrinter.java:[lines 10-138]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter</Message>
+    </Class>
+    <Method classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" name="initializeFrameLine" signature="()Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" start="74" end="81" startBytecode="0" endBytecode="186" sourcefile="ResultsPrinter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/printer/ResultsPrinter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java"/>
+      <Message>In method hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter.initializeFrameLine()</Message>
+    </Method>
+    <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" primary="true" start="76" end="76" startBytecode="8" endBytecode="8" sourcefile="ResultsPrinter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/printer/ResultsPrinter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\printer\ResultsPrinter.java">
+      <Message>At ResultsPrinter.java:[line 76]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" abbrev="MS" category="MALICIOUS_CODE" instanceHash="5e821760adede535d1e04a572745cf80" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="16" cweid="218">
+    <ShortMessage>Field isn&apos;t final but should be</ShortMessage>
+    <LongMessage>hr.fer.zemris.java.tecaj.hw5.sorter.ResultsSorter.sortRegex isn&apos;t final but should be</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj.hw5.sorter.ResultsSorter" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.ResultsSorter" start="13" end="117" sourcefile="ResultsSorter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/ResultsSorter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java">
+        <Message>At ResultsSorter.java:[lines 13-117]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj.hw5.sorter.ResultsSorter</Message>
+    </Class>
+    <Field classname="hr.fer.zemris.java.tecaj.hw5.sorter.ResultsSorter" name="sortRegex" signature="Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.ResultsSorter" sourcefile="ResultsSorter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/ResultsSorter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java">
+        <Message>In ResultsSorter.java</Message>
+      </SourceLine>
+      <Message>Field hr.fer.zemris.java.tecaj.hw5.sorter.ResultsSorter.sortRegex</Message>
+    </Field>
+    <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.ResultsSorter" primary="true" start="13" end="13" startBytecode="2" endBytecode="2" sourcefile="ResultsSorter.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/ResultsSorter.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\ResultsSorter.java">
+      <Message>At ResultsSorter.java:[line 13]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE" instanceHash="2d0ac2c4bd5e09136efddc727695d45d" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="19">
+    <ShortMessage>Comparator doesn&apos;t implement Serializable</ShortMessage>
+    <LongMessage>hr.fer.zemris.java.tecaj.hw5.sorter.comparators.ExecutableComparator implements Comparator but not Serializable</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.ExecutableComparator" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.ExecutableComparator" start="1" end="31" sourcefile="ExecutableComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/ExecutableComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\ExecutableComparator.java">
+        <Message>At ExecutableComparator.java:[lines 1-31]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj.hw5.sorter.comparators.ExecutableComparator</Message>
+    </Class>
+    <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.ExecutableComparator" start="1" end="31" sourcefile="ExecutableComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/ExecutableComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\ExecutableComparator.java" synthetic="true">
+      <Message>At ExecutableComparator.java:[lines 1-31]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE" instanceHash="23490ec8f1fac64c0f65df94a381fe58" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="19">
+    <ShortMessage>Comparator doesn&apos;t implement Serializable</ShortMessage>
+    <LongMessage>hr.fer.zemris.java.tecaj.hw5.sorter.comparators.LastModifiedComparator implements Comparator but not Serializable</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.LastModifiedComparator" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.LastModifiedComparator" start="1" end="31" sourcefile="LastModifiedComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/LastModifiedComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\LastModifiedComparator.java">
+        <Message>At LastModifiedComparator.java:[lines 1-31]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj.hw5.sorter.comparators.LastModifiedComparator</Message>
+    </Class>
+    <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.LastModifiedComparator" start="1" end="31" sourcefile="LastModifiedComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/LastModifiedComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\LastModifiedComparator.java" synthetic="true">
+      <Message>At LastModifiedComparator.java:[lines 1-31]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE" instanceHash="7cf4b763d2d031014266bfa30fd6630e" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="19">
+    <ShortMessage>Comparator doesn&apos;t implement Serializable</ShortMessage>
+    <LongMessage>hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameComparator implements Comparator but not Serializable</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameComparator" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameComparator" start="1" end="31" sourcefile="NameComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/NameComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java">
+        <Message>At NameComparator.java:[lines 1-31]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameComparator</Message>
+    </Class>
+    <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameComparator" start="1" end="31" sourcefile="NameComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/NameComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameComparator.java" synthetic="true">
+      <Message>At NameComparator.java:[lines 1-31]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE" instanceHash="8b45f0786259112ab9677efa0567369f" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="19">
+    <ShortMessage>Comparator doesn&apos;t implement Serializable</ShortMessage>
+    <LongMessage>hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameLengthComparator implements Comparator but not Serializable</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameLengthComparator" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameLengthComparator" start="1" end="32" sourcefile="NameLengthComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/NameLengthComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java">
+        <Message>At NameLengthComparator.java:[lines 1-32]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameLengthComparator</Message>
+    </Class>
+    <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameLengthComparator" start="1" end="32" sourcefile="NameLengthComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/NameLengthComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\NameLengthComparator.java" synthetic="true">
+      <Message>At NameLengthComparator.java:[lines 1-32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE" instanceHash="f0b3d77728419ec9c595c15c209b55ee" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="19">
+    <ShortMessage>Comparator doesn&apos;t implement Serializable</ShortMessage>
+    <LongMessage>hr.fer.zemris.java.tecaj.hw5.sorter.comparators.SizeComparator implements Comparator but not Serializable</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.SizeComparator" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.SizeComparator" start="1" end="32" sourcefile="SizeComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/SizeComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java">
+        <Message>At SizeComparator.java:[lines 1-32]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj.hw5.sorter.comparators.SizeComparator</Message>
+    </Class>
+    <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.SizeComparator" start="1" end="32" sourcefile="SizeComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/SizeComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\SizeComparator.java" synthetic="true">
+      <Message>At SizeComparator.java:[lines 1-32]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" priority="2" abbrev="Se" category="BAD_PRACTICE" instanceHash="50111658596c69947a8bf4fc32eb8465" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="19">
+    <ShortMessage>Comparator doesn&apos;t implement Serializable</ShortMessage>
+    <LongMessage>hr.fer.zemris.java.tecaj.hw5.sorter.comparators.TypeComparator implements Comparator but not Serializable</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.TypeComparator" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.TypeComparator" start="1" end="33" sourcefile="TypeComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/TypeComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\TypeComparator.java">
+        <Message>At TypeComparator.java:[lines 1-33]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj.hw5.sorter.comparators.TypeComparator</Message>
+    </Class>
+    <SourceLine classname="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.TypeComparator" start="1" end="33" sourcefile="TypeComparator.java" sourcepath="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/TypeComparator.java" relSourcepath="hr\fer\zemris\java\tecaj\hw5\sorter\comparators\TypeComparator.java" synthetic="true">
+      <Message>At TypeComparator.java:[lines 1-33]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N" instanceHash="d4812bcb95d71ba12b31c6a7e88c0522" instanceOccurrenceNum="0" instanceOccurrenceMax="0" rank="19">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrIinput.execute(Computer): new java.io.InputStreamReader(InputStream)</LongMessage>
+    <Class classname="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrIinput" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrIinput" start="17" end="43" sourcefile="InstrIinput.java" sourcepath="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrIinput.java" relSourcepath="hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java">
+        <Message>At InstrIinput.java:[lines 17-43]</Message>
+      </SourceLine>
+      <Message>In class hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrIinput</Message>
+    </Class>
+    <Method classname="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrIinput" name="execute" signature="(Lhr/fer/zemris/java/tecaj_2/jcomp/Computer;)Z" isStatic="false" primary="true">
+      <SourceLine classname="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrIinput" start="29" end="43" startBytecode="0" endBytecode="301" sourcefile="InstrIinput.java" sourcepath="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrIinput.java" relSourcepath="hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java"/>
+      <Message>In method hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrIinput.execute(Computer)</Message>
+    </Method>
+    <Method classname="java.io.InputStreamReader" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.InputStreamReader" start="72" end="79" startBytecode="0" endBytecode="108" sourcefile="InputStreamReader.java" sourcepath="java/io/InputStreamReader.java"/>
+      <Message>Called method new java.io.InputStreamReader(InputStream)</Message>
+    </Method>
+    <SourceLine classname="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrIinput" primary="true" start="30" end="30" startBytecode="18" endBytecode="18" sourcefile="InstrIinput.java" sourcepath="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrIinput.java" relSourcepath="hr\fer\zemris\java\tecaj_2\jcomp\impl\instructions\InstrIinput.java">
+      <Message>At InstrIinput.java:[line 30]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion, and will assume that the default platform encoding is suitable. This will cause the application behaviour to vary between platforms. Use an alternative API and specify a charset name or Charset object explicitly.  </p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="SE_COMPARATOR_SHOULD_BE_SERIALIZABLE" abbrev="Se" category="BAD_PRACTICE">
+    <ShortDescription>Comparator doesn&apos;t implement Serializable</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class implements the <code>Comparator</code> interface. You
+should consider whether or not it should also implement the <code>Serializable</code>
+interface. If a comparator is used to construct an ordered collection
+such as a <code>TreeMap</code>, then the <code>TreeMap</code>
+will be serializable only if the comparator is also serializable.
+As most comparators have little or no state, making them serializable
+is generally easy and good defensive programming.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="SBSC_USE_STRINGBUFFER_CONCATENATION" abbrev="SBSC" category="PERFORMANCE">
+    <ShortDescription>Method concatenates strings using + in a loop</ShortDescription>
+    <Details><![CDATA[
+
+<p> The method seems to be building a String using concatenation in a loop.
+In each iteration, the String is converted to a StringBuffer/StringBuilder,
+   appended to, and converted back to a String.
+   This can lead to a cost quadratic in the number of iterations,
+   as the growing string is recopied in each iteration. </p>
+
+<p>Better performance can be obtained by using
+a StringBuffer (or StringBuilder in Java 1.5) explicitly.</p>
+
+<p> For example:</p>
+<pre>
+  // This is bad
+  String s = "";
+  for (int i = 0; i &lt; field.length; ++i) {
+    s = s + field[i];
+  }
+
+  // This is better
+  StringBuffer buf = new StringBuffer();
+  for (int i = 0; i &lt; field.length; ++i) {
+    buf.append(field[i]);
+  }
+  String s = buf.toString();
+</pre>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_SHOULD_BE_FINAL" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field isn&apos;t final but should be</ShortDescription>
+    <Details><![CDATA[
+
+   <p>
+This static field public but not final, and
+could be changed by malicious code or
+        by accident from another package.
+        The field could be made final to avoid
+        this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="SBSC">
+    <Description>String concatenation in loop using + operator</Description>
+  </BugCode>
+  <BugCode abbrev="Se">
+    <Description>Incorrect definition of Serializable class</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="8">
+    <MissingClass>hr.fer.zemris.java.tecaj_2.jcomp.Computer</MissingClass>
+    <MissingClass>hr.fer.zemris.java.tecaj_2.jcomp.ExecutionUnit</MissingClass>
+    <MissingClass>hr.fer.zemris.java.tecaj_2.jcomp.Instruction</MissingClass>
+    <MissingClass>hr.fer.zemris.java.tecaj_2.jcomp.InstructionArgument</MissingClass>
+    <MissingClass>hr.fer.zemris.java.tecaj_2.jcomp.Memory</MissingClass>
+    <MissingClass>hr.fer.zemris.java.tecaj_2.jcomp.Registers</MissingClass>
+    <MissingClass>hr.fer.zemris.java.tecaj_2.jcomp.parser.InstructionCreatorImpl</MissingClass>
+    <MissingClass>hr.fer.zemris.java.tecaj_2.jcomp.parser.ProgramParser</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Sun, 13 Apr 2014 19:54:32 +0200" total_classes="42" referenced_classes="73" total_bugs="12" total_size="744" num_packages="9" vm_version="24.45-b08" cpu_seconds="22.57" clock_seconds="14.40" peak_mbytes="122.41" alloc_mbytes="903.00" gc_seconds="0.17" priority_2="8" priority_1="4">
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/Dir.java" bugCount="0" size="64"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/filter/ResultsFilter.java" bugCount="1" size="36" bugHash="7987f2323615f8a547ef9123d96a842d"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/filter/filters/ExtensionFilenameFilter.java" bugCount="0" size="8"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/filter/filters/FilesFilenameFilter.java" bugCount="0" size="8"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/filter/filters/NameLengthFilenameFilter.java" bugCount="0" size="10"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/filter/filters/ReverseNameLengthFilenameFilter.java" bugCount="0" size="10"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/filter/filters/ReverseSizeFilenameFilter.java" bugCount="0" size="10"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/filter/filters/SizeFilenameFilter.java" bugCount="0" size="10"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/filter/filters/package-info.java" bugCount="0" size="1"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/filter/package-info.java" bugCount="0" size="1"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/package-info.java" bugCount="0" size="1"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/printer/ResultsPrinter.java" bugCount="3" size="88" bugHash="f91acdd474ba3293b1e0d93efade5f41"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/printer/package-info.java" bugCount="0" size="1"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/sorter/ResultsSorter.java" bugCount="1" size="60" bugHash="eb4e821363cfd2c18a30bfd6d7470483"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/ExecutableComparator.java" bugCount="1" size="17" bugHash="177490da4bccb8f3165e90a9e1d513e0"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/LastModifiedComparator.java" bugCount="1" size="17" bugHash="9e484c559c91f3d8d6f2e99266da5d1b"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/NameComparator.java" bugCount="1" size="17" bugHash="723021c65835355c9f7ce25137a47eca"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/NameLengthComparator.java" bugCount="1" size="17" bugHash="3fc53ebb9bcd8ed4224428c15e70f40b"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/SizeComparator.java" bugCount="1" size="17" bugHash="05fc4142dacdccc4e8493e261597f0ea"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/TypeComparator.java" bugCount="1" size="17" bugHash="67a3a95fe3ae6f625164e2979042e5f1"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/sorter/comparators/package-info.java" bugCount="0" size="1"/>
+    <FileStats path="hr/fer/zemris/java/tecaj/hw5/sorter/package-info.java" bugCount="0" size="1"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/Simulator.java" bugCount="0" size="14"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/ComputerImpl.java" bugCount="0" size="14"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/ExecutionUnitImpl.java" bugCount="0" size="18"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/MemoryImpl.java" bugCount="0" size="17"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/RegistersImpl.java" bugCount="0" size="31"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrAdd.java" bugCount="0" size="31"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrDecrement.java" bugCount="0" size="17"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrEcho.java" bugCount="0" size="19"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrHalt.java" bugCount="0" size="6"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrIinput.java" bugCount="1" size="23" bugHash="51da67c4d923a11614ebde9efc348386"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrIncrement.java" bugCount="0" size="17"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrJump.java" bugCount="0" size="13"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrJumpIfTrue.java" bugCount="0" size="14"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrLoad.java" bugCount="0" size="19"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrMove.java" bugCount="0" size="20"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrMul.java" bugCount="0" size="31"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/InstrTestEquals.java" bugCount="0" size="25"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/instructions/package-info.java" bugCount="0" size="1"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/impl/package-info.java" bugCount="0" size="1"/>
+    <FileStats path="hr/fer/zemris/java/tecaj_2/jcomp/package-info.java" bugCount="0" size="1"/>
+    <PackageStats package="hr.fer.zemris.java.tecaj.hw5" total_bugs="0" total_types="2" total_size="65">
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.Dir" sourceFile="Dir.java" interface="false" size="64" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hr.fer.zemris.java.tecaj.hw5.filter" total_bugs="1" total_types="2" total_size="37" priority_1="1">
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.filter.ResultsFilter" sourceFile="ResultsFilter.java" interface="false" size="36" bugs="1" priority_1="1"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.filter.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hr.fer.zemris.java.tecaj.hw5.filter.filters" total_bugs="0" total_types="7" total_size="57">
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.filter.filters.ExtensionFilenameFilter" sourceFile="ExtensionFilenameFilter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.filter.filters.FilesFilenameFilter" sourceFile="FilesFilenameFilter.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.filter.filters.NameLengthFilenameFilter" sourceFile="NameLengthFilenameFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.filter.filters.ReverseNameLengthFilenameFilter" sourceFile="ReverseNameLengthFilenameFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.filter.filters.ReverseSizeFilenameFilter" sourceFile="ReverseSizeFilenameFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.filter.filters.SizeFilenameFilter" sourceFile="SizeFilenameFilter.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.filter.filters.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hr.fer.zemris.java.tecaj.hw5.printer" total_bugs="3" total_types="2" total_size="89" priority_2="2" priority_1="1">
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.printer.ResultsPrinter" sourceFile="ResultsPrinter.java" interface="false" size="88" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.printer.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hr.fer.zemris.java.tecaj.hw5.sorter" total_bugs="1" total_types="2" total_size="61" priority_1="1">
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.sorter.ResultsSorter" sourceFile="ResultsSorter.java" interface="false" size="60" bugs="1" priority_1="1"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.sorter.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hr.fer.zemris.java.tecaj.hw5.sorter.comparators" total_bugs="6" total_types="7" total_size="103" priority_2="6">
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.ExecutableComparator" sourceFile="ExecutableComparator.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.LastModifiedComparator" sourceFile="LastModifiedComparator.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameComparator" sourceFile="NameComparator.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.NameLengthComparator" sourceFile="NameLengthComparator.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.SizeComparator" sourceFile="SizeComparator.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.TypeComparator" sourceFile="TypeComparator.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj.hw5.sorter.comparators.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hr.fer.zemris.java.tecaj_2.jcomp" total_bugs="0" total_types="2" total_size="15">
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.Simulator" sourceFile="Simulator.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hr.fer.zemris.java.tecaj_2.jcomp.impl" total_bugs="0" total_types="5" total_size="81">
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.ComputerImpl" sourceFile="ComputerImpl.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.ExecutionUnitImpl" sourceFile="ExecutionUnitImpl.java" interface="false" size="18" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.MemoryImpl" sourceFile="MemoryImpl.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.RegistersImpl" sourceFile="RegistersImpl.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions" total_bugs="1" total_types="13" total_size="236" priority_1="1">
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrAdd" sourceFile="InstrAdd.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrDecrement" sourceFile="InstrDecrement.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrEcho" sourceFile="InstrEcho.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrHalt" sourceFile="InstrHalt.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrIinput" sourceFile="InstrIinput.java" interface="false" size="23" bugs="1" priority_1="1"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrIncrement" sourceFile="InstrIncrement.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrJump" sourceFile="InstrJump.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrJumpIfTrue" sourceFile="InstrJumpIfTrue.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrLoad" sourceFile="InstrLoad.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrMove" sourceFile="InstrMove.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrMul" sourceFile="InstrMul.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.InstrTestEquals" sourceFile="InstrTestEquals.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions.package-info" sourceFile="package-info.java" interface="true" size="1" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1696" invocations="481" avgMicrosecondsPerInvocation="3527" maxMicrosecondsPerInvocation="527462" standardDeviationMircosecondsPerInvocation="26548"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="1676" invocations="281" avgMicrosecondsPerInvocation="5966" maxMicrosecondsPerInvocation="444122" standardDeviationMircosecondsPerInvocation="39405"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="1019" invocations="482" avgMicrosecondsPerInvocation="2114" maxMicrosecondsPerInvocation="477201" standardDeviationMircosecondsPerInvocation="22095"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="803" invocations="97" avgMicrosecondsPerInvocation="8280" maxMicrosecondsPerInvocation="657779" standardDeviationMircosecondsPerInvocation="66905"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="666" invocations="97" avgMicrosecondsPerInvocation="6870" maxMicrosecondsPerInvocation="401758" standardDeviationMircosecondsPerInvocation="40679"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="630" invocations="98" avgMicrosecondsPerInvocation="6429" maxMicrosecondsPerInvocation="196331" standardDeviationMircosecondsPerInvocation="27371"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="562" invocations="97" avgMicrosecondsPerInvocation="5795" maxMicrosecondsPerInvocation="93873" standardDeviationMircosecondsPerInvocation="15461"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="546" invocations="73" avgMicrosecondsPerInvocation="7485" maxMicrosecondsPerInvocation="130988" standardDeviationMircosecondsPerInvocation="21871"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="476" invocations="98" avgMicrosecondsPerInvocation="4861" maxMicrosecondsPerInvocation="256803" standardDeviationMircosecondsPerInvocation="26585"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="355" invocations="81" avgMicrosecondsPerInvocation="4392" maxMicrosecondsPerInvocation="174767" standardDeviationMircosecondsPerInvocation="21759"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="288" invocations="91" avgMicrosecondsPerInvocation="3169" maxMicrosecondsPerInvocation="55878" standardDeviationMircosecondsPerInvocation="7070"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.LiveLocalStoreDataflowFactory" totalMilliseconds="260" invocations="91" avgMicrosecondsPerInvocation="2863" maxMicrosecondsPerInvocation="206631" standardDeviationMircosecondsPerInvocation="21521"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="251" invocations="73" avgMicrosecondsPerInvocation="3439" maxMicrosecondsPerInvocation="111315" standardDeviationMircosecondsPerInvocation="13997"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

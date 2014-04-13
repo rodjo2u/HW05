@@ -15,7 +15,7 @@ public class Simulator {
 				"hr.fer.zemris.java.tecaj_2.jcomp.impl.instructions");
 
 		try {
-			ProgramParser.parse("examples/asmProgram3.txt", comp, creator);
+			ProgramParser.parse("examples/prim2.txt", comp, creator);
 		} catch(Exception e) {
 			System.out.println("Could not parse assembly code.");
 			e.printStackTrace();

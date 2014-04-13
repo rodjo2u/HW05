@@ -1,10 +1,17 @@
 #Ovaj program 3 puta ispisuje "Hello world!"
 
+			echo @broj2			;
 			load r0, @broj1		; ucitaj 3 u registar r0
-			echo r0				; ispisi na konzolu poruku
+			echo r0				;
+			echo @broj2			; ispisi na konzolu poruku
+	 		load r7, @poruka 	; ucitaj poruku u r7
+			echo r7 			; ispisi na konzolu poruku
+
+
 	 		halt				; zaustavi procesor
 
 #podaci koje koristimo u programu
 
+@poruka: DEFSTR "Hello world!\n"
 @broj1:		DEFINT 3			; broj 3 na drugoj mem. lokaciji
 @broj2:		DEFINT 5			; broj 0 na trecoj mem. lokaciji

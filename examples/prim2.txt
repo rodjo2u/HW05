@@ -1,0 +1,43 @@
+# rješen zadnji dio prvog zadatka pete domaće zadaće
+
+
+			load r0, @poruka1;
+			load r1, @pet;
+			load r2, @nula;
+			load r4, @noviRed;
+			load r5, @poruka2;
+			load r6, @poruka3;
+			echo r0;
+			
+			iinput @izlaz;
+@petlja:	jumpIfTrue @nastavi;
+			echo r6;
+			echo r0;
+			iinput @izlaz;
+			jump @petlja;
+			
+			
+@nastavi:	load r3, @izlaz;
+			echo r5;
+@ispis:		testEquals r1, r2;
+			jumpIfTrue @gotovo;
+			decrement r3;
+			decrement r1;
+			echo r3;
+			echo r4;
+			jump @ispis;
+
+	
+@gotovo:	halt				; zaustavi procesor
+
+#podaci koje koristimo u programu
+
+
+@poruka1:	DEFSTR "Unesite početni broj: "
+@poruka2:   DEFSTR "Sljedećih 5 brojeva su : \n"
+@poruka3:   DEFSTR "Unos nije moguće protumačiti kao cijeli broj.\n"
+@noviRed:	DEFSTR "\n"
+@nula:		DEFINT 0	
+@pet:		DEFINT 5			
+@izlaz:		DEFINT 0			
+		

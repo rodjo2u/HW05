@@ -31,6 +31,7 @@ public class InstrMul implements Instruction {
 		this.indexRegistra3 = ((Integer) arguments.get(2).getValue())
 				.intValue();
 	}
+	
 	public boolean execute(Computer computer) {
 		Object value1 = computer.getRegisters()
 				.getRegisterValue(indexRegistra2);
